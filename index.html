@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AeroSenergy CGPA Calculator</title>
+            <link rel="stylesheet" href="styles.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+        </head>
+        <body>
+            <div class="container">
+                <header>
+                    <!-- aerosenergy-logo.png width="50" height="60"-->
+                    <img src="https://243119680.fs1.hubspotusercontent-na2.net/hub/243119680/hubfs/Copilot_20250623_134452.png?width=1536&height=1536&name=Copilot_20250623_134452.png" alt="AeroSenergy Logo" width="60" height="60" class="Logo">
+                    <h1>AeroSenergy CGPA Calculator</h1>
+                    <br>
+                    <p>Calculate your CGPA based on the grading system of various universities in Pakistan.</p>
+                </header>
+
+                <div class="calculator-container">
+                    <div class="university-selector">
+                        <label for="university">Select Pakistan University:</label>
+                        <select id="university" onchange="updateGradingSystem()">
+                            <option value="nust">National University of Sciences and Technology</option>
+                            <option value="comsats">COMSATS University</option>
+                            <option value="pucit">University of the Punjab</option>
+                            <option value="uet">University of Engineering and Technology</option>
+                            <option value="fast">FAST National University</option>
+                            <option value="giki">Ghulam Ishaq Khan Institute</option>
+                            <option value="lums">Lahore University of Management Sciences</option>
+                            <option value="iba">Institute of Business Administration</option>
+                            <option value="bzu">Bahauddin Zakariya University</option>
+                            <option value="uop">University of Peshawar</option>
+                        </select>
+                    
+                    </div>
+
+                    <div class="subject-selector">
+                        <label for="subject">Select Subject:</label>
+                        <select id="subject">
+                            <option value="general">General</option>
+                            <option value="aeronautical">Aeronautical Engineering</option>
+                            <option value="civil">Civil Engineering</option>
+                            <option value="electrical">Electrical and Electronic Engineering</option>
+                            <option value="mechanical">Mechanical Engineering</option>
+                            <option value="computer">Computer Science</option>
+                        </select>
+                    </div>
+
+                    <div class="course-selector">
+                        <label for="course-dropdown">Select Course:</label>
+                        <select id="course-dropdown">
+                            <option value="">Select a subject first</option>
+                            <option value="course1">Aerodynamics</option>
+                            <option value="course2">Aircraft Structures</option>
+                            <option value="course3">Flight Mechanics</option>
+                            <option value="course4">Propulsion Systems</option>
+                            <option value="course5">Aircraft Design</option>
+                            <option value="course6">Aerospace Materials</option>
+                            <option value="course8">Avionics</option>
+                                      
+
+                        </select>
+                        <button class="add-course-btn" onclick="addCourse()">Add Selected Course</button>
+                    </div>
+
+
+
+                    <div class="grading-system-info">
+                        <h3>Grading System:</h3>
+                        <p id="grading-system">4.0 CGPA Scale (A=4.0, B=3.0, C=2.0, D=1.0, F=0.0)</p>
+                    </div>
+
+                    <div class="courses-container">
+                        <div class="course-input" id="course1">
+                            <div class="course-header">
+                                <h3>Course #1</h3>
+                                <button class="remove-course" onclick="removeCourse('course1')">x</button>
+                            </div>
+
+                    <div class="input-group">
+                        <input type="text" placeholder="Course Name" class="course-name">
+                        <input type="number" placeholder="Credit Hours" min="1" max="6" class="credit-hours">
+                        <select class="grade">
+                            <option value="4.0">A (4.0)</option>
+                            <option value="3.7">A- (3.7)</option>
+                            <option value="3.3">B+ (3.3)</option>
+                            <option value="3.0">B (3.0)</option>
+                            <option value="2.7">B- (2.7)</option>
+                            <option value="2.3">C+ (2.3)</option>
+                            <option value="2.0">C (2.0)</option>
+                            <option value="1.7">C- (1.7)</option>
+                            <option value="1.3">D+ (1.3)</option>
+                            <option value="1.0">D (1.0)</option>
+                            <option value="0.0">F (0.0)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+             <button class="add-course" onclick="addCourse()">+ Add Course</button>
+            <button class="calculate-btn" onclick="calculateCGPA()">Calculate CGPA</button>
+
+            <div class="result-container" id="result-container" style="display: none;">
+                <h2>Your CGPA Result</h2>
+                <div class="result-value" id="cgpa-result">0.00</div>
+                <div class="result-description" id="result-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+           
+        </body>
+</html>
