@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AeroSenergy CGPA Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+    </head>
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AeroSenergy CGPA Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header section with navigation bar -->
+            <header>
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img src="https://243119680.fs1.hubspotusercontent-na2.net/hub/243119680/hubfs/Copilot_20250623_134452.png?width=1536&height=1536&name=Copilot_20250623_134452.png" alt="AeroSenergy Logo" width="60" height="60" class="logo">
+                        <h1>AeroSenergy CGPA Calculator</h1>
+                    </div>
+                    <!-- Navigation menu -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#" class="nav-button">Home</a></li>
+                            <li><a href="university.html" class="nav-button" target="_blank">University</a></li>
+                            <li><a href="#" class="nav-button">Contact</a></li>
+                            <li><a href="#" class="nav-button">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p>Calculate your CGPA based on the grading system of various universities in Pakistan.</p>
+            </header>
+
+            <!-- Main content area with the calculator and new links section -->
+            <div class="main-content">
+                <!-- Calculator Container -->
+                <div class="calculator-container">
+                    <div class="university-selector">
+                        <label for="university">Select University:</label>
+                        <select id="university">
+                            <option value="nust">National University of Sciences and Technology (NUST)</option>
+                            <option value="comsats">COMSATS University Islamabad</option>
+                            <option value="pucit">Punjab University College of Information Technology (PUCIT)</option>
+                            <option value="uet">University of Engineering and Technology (UET)</option>
+                            <option value="fast">FAST National University</option>
+                            <option value="giki">Ghulam Ishaq Khan Institute (GIKI)</option>
+                            <option value="lums">Lahore University of Management Sciences (LUMS)</option>
+                            <option value="iba">Institute of Business Administration (IBA)</option>
+                            <option value="bzu">Bahauddin Zakariya University (BZU)</option>
+                            <option value="uop">University of Peshawar (UOP)</option>
+                        </select>
+                    </div>
+
+                    <div class="subject-selector">
+                        <label for="subject">Select Subject:</label>
+                        <select id="subject">
+                            <option value="general">General</option>
+                            <option value="aeronautical">Aeronautical Engineering</option>
+                            <option value="civil">Civil Engineering</option>
+                            <option value="electrical">Electrical and Electronic Engineering</option>
+                            <option value="mechanical">Mechanical Engineering</option>
+                            <option value="computer">Computer Science</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grading-system-info">
+                        <h3>Grading System:</h3>
+                        <p id="grading-system"></p>
+                    </div>
+
+                    <div id="courses-container">
+                        <!-- Initial course input will be here -->
+                    </div>
+                    
+                    <button class="add-course" id="add-course-btn">+ Add Course</button>
+                    <button class="calculate-btn" id="calculate-btn">Calculate CGPA</button>
+
+                    <div class="result-container" id="result-container" style="display: none;">
+                        <h2>Your CGPA Result</h2>
+                        <div class="result-value" id="cgpa-result">0.00</div>
+                        <div class="result-description" id="result-description"></div>
+                    </div>
+                </div>
+
+                <!-- New Quick Links Container -->
+                <div class="quick-links-container">
+                    <h2>Quick University Links</h2>
+                    <div class="university-link">
+                        <h3><a href="https://nust.edu.pk/" target="_blank">National University of Sciences and Technology (NUST)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://comsats.edu.pk/" target="_blank">COMSATS University Islamabad</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://pucit.edu.pk/" target="_blank">Punjab University College of Information Technology (PUCIT)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://www.uet.edu.pk/" target="_blank">University of Engineering and Technology (UET)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://nu.edu.pk/" target="_blank">FAST National University</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://giki.edu.pk/" target="_blank">Ghulam Ishaq Khan Institute (GIKI)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://lums.edu.pk/" target="_blank">Lahore University of Management Sciences (LUMS)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://www.iba.edu.pk/" target="_blank">Institute of Business Administration (IBA)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="http://www.bzu.edu.pk/" target="_blank">Bahauddin Zakariya University (BZU)</a></h3>
+                    </div>
+                    <div class="university-link">
+                        <h3><a href="https://uop.edu.pk/" target="_blank">University of Peshawar (UOP)</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-text">Aerosenergy Software Development, Islamabad, Pakistan - 2025. All rights reserved.</h3>
+                <div class="footer-right">
+                    <a href="https://243119680.hs-sites-na2.com/home" target="_blank">Website</a>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
